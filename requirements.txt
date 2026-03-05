@@ -1,0 +1,6 @@
+gspread 
+google-auth 
+requests 
+beautifulsoup4
+cloudscraper==1.2.71
+oauth2client==4.1.3
