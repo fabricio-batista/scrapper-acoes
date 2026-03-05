@@ -95,7 +95,7 @@ pip install -r requirements.txt
 
 5️⃣ Configurar as URLs e Colunas
 ```bash
-No arquivo config.py, insira:
+No arquivo ```.env```, insira:
     -> URL do Google Sheets das ações (SHEET_URL)
     -> Colunas da planilha (já configuradas no projeto)
 ```
