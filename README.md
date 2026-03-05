@@ -31,6 +31,14 @@ Com ele você terá dados sempre atualizados sobre seus ativos sem precisar copi
 - Dividend Yield (%)
 - P/VP
 
+✅ Scraping de dados **dos FIAGROs**:
+- Ticker (informado manualmente na planilha, de acordo com o que deseja pesquisar)
+- Valor Atual
+- Mínimo 52 semanas
+- Máximo 52 semanas
+- Dividend Yield (%)
+- P/VP
+
 ✅ Atualização **em lote (batch)** no Google Sheets para evitar limites de quota do Google.
 
 ✅ Conversão automática dos números para formato **brasileiro** (ex: `3,58` em vez de `3.58`) para que a planilha interprete como número.
@@ -58,8 +66,8 @@ Com ele você terá dados sempre atualizados sobre seus ativos sem precisar copi
 ## ⚙️ Como Configurar
 1️⃣ Clonar o repositório
 ```sh
-git clone https://github.com/seuusuario/seurepo.git
-cd seurepo
+git clone https://github.com/fabricio-batista/scrapper-acoes
+cd scrapper-acoes
 ```
 
 2️⃣ Criar o ambiente virtual (opcional, mas recomendado)
@@ -94,16 +102,39 @@ No arquivo config.py, insira:
 ---
 
 ## ▶️ Como Usar
+    IMPORTANTE: Para que o script faça as buscas corretamente, é necessario preencher manualmente, em cada aba da planilha, os TICKERs que deseja buscar as informaçoes, um por linha.
+
+    Exemplo: 
+    Na aba ações, em cada linha da coluna TICKER > 
+        BBAS3
+        PETR4
+        ISAE4
+
+    Na aba FIIs, em cada linha da coluna TICKER > 
+        MXRF11
+        XPML11
+        BTLG11
+
+    Na aba FIIs, em cada linha da coluna TICKER > 
+        SNAG11
+        RURA11
+        RZAG11
+
+    Observação: Os Tickers mencionados acima são meramente para fins de exemplo e NÃO são indicações de investimento.
+
 Execute:
 ```bash
-python main.py
+python3 main.py
 ```
 Você verá o menu:
 ```bash
-Escolha:
-    1 - Buscar Ações
-    2 - Buscar FIIs
-    3 - Atualizar tudo
+Opções: 
+[1] - Buscar Ações
+[2] - Buscar FIIs
+[3] - Buscar FIAGRO
+[4] - Atualizar tudo
+[X] - Sair
+Escolha uma opção:
 ```
 Após escolher a opção, o script fará o scraping e atualizará sua planilha no Google Sheets automaticamente.
 
@@ -112,12 +143,17 @@ Após escolher a opção, o script fará o scraping e atualizará sua planilha n
 ## 📊 Exemplo de Colunas
 Ações:
 ```bash
-TICKER VALOR ATUAL	MIN 52S	MAX 52S	D.Y.% MEDIA D.Y (5a) P/VP P/L LPA VPA
+TICKER | VALOR|  ATUAL|	MIN 52S| MAX 52S| D.Y.%| MEDIA D.Y (5a)| P/VP | P/L | LPA | VPA
 ```
 
 FIIs:
 ```bash
-TICKER VALOR ATUAL	MIN 52S	MAX 52S	D.Y.% P/VP
+TICKER | VALOR| ATUAL| MIN 52S| MAX 52S| D.Y.%| P/VP
+```
+
+FIAGRO:
+```bash
+TICKER | VALOR| ATUAL| MIN 52S| MAX 52S| D.Y.%| P/VP
 ```
 ---
 
