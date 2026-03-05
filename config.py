@@ -1,6 +1,10 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # URLs
-SHEET_URL = "https://docs.google.com/spreadsheets/d/1Rl7LH5rwdGaUs_0YvICVPDGtFd62m8f_5P_wdaL_A_g/edit?gid=0#gid=0"
+SHEET_URL = os.getenv("SHEET_URL")
 
 WORKSHEET_ACOES = "ações"
 WORKSHEET_FIIS = "fiis"

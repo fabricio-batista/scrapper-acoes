@@ -102,7 +102,8 @@ No arquivo config.py, insira:
 ---
 
 ## ▶️ Como Usar
-    IMPORTANTE: Para que o script faça as buscas corretamente, é necessario preencher manualmente, em cada aba da planilha, os TICKERs que deseja buscar as informaçoes, um por linha.
+    IMPORTANTE: Para que o script faça as buscas corretamente, é necessario preencher manualmente, 
+    em cada aba da planilha, os TICKERs que deseja buscar as informaçoes, um por linha.
 
     Exemplo: 
     Na aba ações, em cada linha da coluna TICKER > 
@@ -120,7 +121,8 @@ No arquivo config.py, insira:
         RURA11
         RZAG11
 
-    Observação: Os Tickers mencionados acima são meramente para fins de exemplo e NÃO são indicações de investimento.
+    Observação: Os Tickers mencionados acima são meramente para fins de exemplo e NÃO são 
+    indicações de investimento.
 
 Execute:
 ```bash
